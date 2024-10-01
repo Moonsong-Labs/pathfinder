@@ -12,12 +12,8 @@ pub(crate) mod transaction;
 mod trie;
 
 pub use event::{
-    EmittedEvent,
-    EventFilter,
-    EventFilterError,
-    PageOfEvents,
-    KEY_FILTER_LIMIT as EVENT_KEY_FILTER_LIMIT,
-    PAGE_SIZE_LIMIT as EVENT_PAGE_SIZE_LIMIT,
+    EmittedEvent, EventFilter, EventFilterError, PageOfEvents,
+    KEY_FILTER_LIMIT as EVENT_KEY_FILTER_LIMIT, PAGE_SIZE_LIMIT as EVENT_PAGE_SIZE_LIMIT,
 };
 use pathfinder_common::event::Event;
 use pathfinder_common::receipt::Receipt;

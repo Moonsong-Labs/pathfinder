@@ -4,13 +4,7 @@ use futures::StreamExt;
 use p2p::client::types::SignedBlockHeader;
 use p2p::PeerData;
 use pathfinder_common::{
-    BlockHash,
-    BlockHeader,
-    BlockNumber,
-    Chain,
-    ChainId,
-    ClassCommitment,
-    PublicKey,
+    BlockHash, BlockHeader, BlockNumber, Chain, ChainId, ClassCommitment, PublicKey,
     StorageCommitment,
 };
 use pathfinder_storage::Storage;

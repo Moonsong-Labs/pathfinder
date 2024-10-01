@@ -1190,17 +1190,8 @@ mod tests {
 
     use pathfinder_common::macro_prelude::*;
     use pathfinder_common::{
-        felt_bytes,
-        BlockCommitmentSignature,
-        BlockHash,
-        BlockHeader,
-        BlockNumber,
-        ClassHash,
-        EventCommitment,
-        SierraHash,
-        StateCommitment,
-        StateDiffCommitment,
-        StateUpdate,
+        felt_bytes, BlockCommitmentSignature, BlockHash, BlockHeader, BlockNumber, ClassHash,
+        EventCommitment, SierraHash, StateCommitment, StateDiffCommitment, StateUpdate,
         TransactionCommitment,
     };
     use pathfinder_crypto::Felt;

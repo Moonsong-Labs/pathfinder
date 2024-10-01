@@ -43,9 +43,7 @@ mod tests {
     use pathfinder_common::macro_prelude::*;
     use pathfinder_common::transaction::EntryPointType::External;
     use pathfinder_common::transaction::{
-        DeployTransactionV0,
-        InvokeTransactionV0,
-        TransactionVariant,
+        DeployTransactionV0, InvokeTransactionV0, TransactionVariant,
     };
     use pretty_assertions_sorted::assert_eq;
 

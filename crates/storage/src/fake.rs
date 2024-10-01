@@ -120,29 +120,14 @@ pub mod init {
     use pathfinder_common::event::Event;
     use pathfinder_common::receipt::Receipt;
     use pathfinder_common::state_update::{
-        ContractClassUpdate,
-        ContractUpdate,
-        SystemContractUpdate,
+        ContractClassUpdate, ContractUpdate, SystemContractUpdate,
     };
     use pathfinder_common::test_utils::fake_non_empty_with_rng;
     use pathfinder_common::transaction::Transaction;
     use pathfinder_common::{
-        class_definition,
-        BlockHash,
-        BlockHeader,
-        BlockNumber,
-        ChainId,
-        ContractAddress,
-        EventCommitment,
-        ReceiptCommitment,
-        SierraHash,
-        SignedBlockHeader,
-        StarknetVersion,
-        StateCommitment,
-        StateUpdate,
-        TransactionCommitment,
-        TransactionHash,
-        TransactionIndex,
+        class_definition, BlockHash, BlockHeader, BlockNumber, ChainId, ContractAddress,
+        EventCommitment, ReceiptCommitment, SierraHash, SignedBlockHeader, StarknetVersion,
+        StateCommitment, StateUpdate, TransactionCommitment, TransactionHash, TransactionIndex,
     };
     use rand::Rng;
     use starknet_gateway_types::class_hash::compute_class_hash;

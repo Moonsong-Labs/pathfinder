@@ -602,27 +602,18 @@ pub mod dto {
 pub(crate) mod tests {
     use pathfinder_common::macro_prelude::*;
     use pathfinder_common::{
-        felt,
-        BlockHeader,
-        ContractAddress,
-        Fee,
-        StarknetVersion,
-        StorageAddress,
-        StorageValue,
+        felt, BlockHeader, ContractAddress, Fee, StarknetVersion, StorageAddress, StorageValue,
         TransactionVersion,
     };
     use pathfinder_storage::Storage;
     use starknet_gateway_test_fixtures::class_definitions::{
-        DUMMY_ACCOUNT_CLASS_HASH,
-        ERC20_CONTRACT_DEFINITION_CLASS_HASH,
+        DUMMY_ACCOUNT_CLASS_HASH, ERC20_CONTRACT_DEFINITION_CLASS_HASH,
     };
 
     use super::*;
     use crate::v02::types::request::{
-        BroadcastedDeclareTransaction,
-        BroadcastedDeclareTransactionV2,
-        BroadcastedInvokeTransaction,
-        BroadcastedInvokeTransactionV1,
+        BroadcastedDeclareTransaction, BroadcastedDeclareTransactionV2,
+        BroadcastedInvokeTransaction, BroadcastedInvokeTransactionV1,
     };
     use crate::v02::types::ContractClass;
     use crate::v05::method::call::FunctionCall;

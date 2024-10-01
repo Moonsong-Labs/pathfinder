@@ -67,20 +67,9 @@ impl From<DataAvailabilityMode> for starknet_api::data_availability::DataAvailab
 /// Groups all strictly input types of the RPC API.
 pub mod request {
     use pathfinder_common::{
-        AccountDeploymentDataElem,
-        CallParam,
-        CasmHash,
-        ChainId,
-        ClassHash,
-        ContractAddress,
-        ContractAddressSalt,
-        EntryPoint,
-        Fee,
-        PaymasterDataElem,
-        Tip,
-        TransactionNonce,
-        TransactionSignatureElem,
-        TransactionVersion,
+        AccountDeploymentDataElem, CallParam, CasmHash, ChainId, ClassHash, ContractAddress,
+        ContractAddressSalt, EntryPoint, Fee, PaymasterDataElem, Tip, TransactionNonce,
+        TransactionSignatureElem, TransactionVersion,
     };
     use serde::Deserialize;
     use serde_with::serde_as;
@@ -632,14 +621,8 @@ pub mod request {
 
             use super::super::*;
             use crate::v02::types::{
-                CairoContractClass,
-                ContractEntryPoints,
-                DataAvailabilityMode,
-                ResourceBound,
-                ResourceBounds,
-                SierraContractClass,
-                SierraEntryPoint,
-                SierraEntryPoints,
+                CairoContractClass, ContractEntryPoints, DataAvailabilityMode, ResourceBound,
+                ResourceBounds, SierraContractClass, SierraEntryPoint, SierraEntryPoints,
             };
 
             #[test]

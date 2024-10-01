@@ -1,10 +1,5 @@
 use pathfinder_common::{
-    BlockHash,
-    BlockNumber,
-    BlockTimestamp,
-    GasPrice,
-    SequencerAddress,
-    StarknetVersion,
+    BlockHash, BlockNumber, BlockTimestamp, GasPrice, SequencerAddress, StarknetVersion,
     StateCommitment,
 };
 use serde::Serialize;

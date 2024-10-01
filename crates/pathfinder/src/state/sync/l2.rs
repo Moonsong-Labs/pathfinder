@@ -4,18 +4,8 @@ use std::time::Duration;
 use anyhow::{anyhow, Context};
 use pathfinder_common::state_update::{ContractClassUpdate, StateUpdateData};
 use pathfinder_common::{
-    BlockCommitmentSignature,
-    BlockHash,
-    BlockNumber,
-    Chain,
-    ChainId,
-    ClassHash,
-    EventCommitment,
-    PublicKey,
-    StateCommitment,
-    StateDiffCommitment,
-    StateUpdate,
-    TransactionCommitment,
+    BlockCommitmentSignature, BlockHash, BlockNumber, Chain, ChainId, ClassHash, EventCommitment,
+    PublicKey, StateCommitment, StateDiffCommitment, StateUpdate, TransactionCommitment,
 };
 use pathfinder_storage::Storage;
 use starknet_gateway_client::GatewayApi;
@@ -659,31 +649,15 @@ mod tests {
         use assert_matches::assert_matches;
         use pathfinder_common::macro_prelude::*;
         use pathfinder_common::{
-            BlockCommitmentSignature,
-            BlockHash,
-            BlockId,
-            BlockNumber,
-            BlockTimestamp,
-            Chain,
-            ChainId,
-            ClassHash,
-            ContractAddress,
-            GasPrice,
-            PublicKey,
-            SequencerAddress,
-            StarknetVersion,
-            StateCommitment,
-            StateUpdate,
-            StorageAddress,
-            StorageValue,
+            BlockCommitmentSignature, BlockHash, BlockId, BlockNumber, BlockTimestamp, Chain,
+            ChainId, ClassHash, ContractAddress, GasPrice, PublicKey, SequencerAddress,
+            StarknetVersion, StateCommitment, StateUpdate, StorageAddress, StorageValue,
         };
         use pathfinder_crypto::Felt;
         use pathfinder_storage::StorageBuilder;
         use starknet_gateway_client::MockGatewayApi;
         use starknet_gateway_types::error::{
-            KnownStarknetErrorCode,
-            SequencerError,
-            StarknetError,
+            KnownStarknetErrorCode, SequencerError, StarknetError,
         };
         use starknet_gateway_types::reply;
         use starknet_gateway_types::reply::GasPrices;

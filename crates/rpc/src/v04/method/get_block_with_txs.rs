@@ -99,12 +99,7 @@ fn get_block_transactions(
 
 mod types {
     use pathfinder_common::{
-        BlockHash,
-        BlockHeader,
-        BlockNumber,
-        BlockTimestamp,
-        SequencerAddress,
-        StateCommitment,
+        BlockHash, BlockHeader, BlockNumber, BlockTimestamp, SequencerAddress, StateCommitment,
     };
     use serde::Serialize;
     use serde_with::{serde_as, skip_serializing_none};

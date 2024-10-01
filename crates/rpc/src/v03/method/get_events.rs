@@ -492,12 +492,7 @@ struct ParseContinuationTokenError;
 
 mod types {
     use pathfinder_common::{
-        BlockHash,
-        BlockNumber,
-        ContractAddress,
-        EventData,
-        EventKey,
-        TransactionHash,
+        BlockHash, BlockNumber, ContractAddress, EventData, EventKey, TransactionHash,
     };
     use serde::Serialize;
 

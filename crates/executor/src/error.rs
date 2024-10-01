@@ -1,6 +1,5 @@
 use blockifier::execution::errors::{
-    EntryPointExecutionError as BlockifierEntryPointExecutionError,
-    PreExecutionError,
+    EntryPointExecutionError as BlockifierEntryPointExecutionError, PreExecutionError,
 };
 use blockifier::state::errors::StateError;
 use blockifier::transaction::errors::TransactionExecutionError as BlockifierTransactionExecutionError;

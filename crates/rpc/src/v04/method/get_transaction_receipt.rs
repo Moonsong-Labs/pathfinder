@@ -80,14 +80,8 @@ pub async fn get_transaction_receipt(
 
 pub mod types {
     use pathfinder_common::{
-        BlockHash,
-        BlockNumber,
-        ContractAddress,
-        EventData,
-        EventKey,
-        Fee,
-        L2ToL1MessagePayloadElem,
-        TransactionHash,
+        BlockHash, BlockNumber, ContractAddress, EventData, EventKey, Fee,
+        L2ToL1MessagePayloadElem, TransactionHash,
     };
     use serde::Serialize;
     use serde_with::serde_as;

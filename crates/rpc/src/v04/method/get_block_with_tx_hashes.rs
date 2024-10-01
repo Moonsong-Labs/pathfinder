@@ -77,12 +77,7 @@ pub async fn get_block_with_tx_hashes(
 
 mod types {
     use pathfinder_common::{
-        BlockHash,
-        BlockHeader,
-        BlockNumber,
-        BlockTimestamp,
-        SequencerAddress,
-        StateCommitment,
+        BlockHash, BlockHeader, BlockNumber, BlockTimestamp, SequencerAddress, StateCommitment,
         TransactionHash,
     };
     use serde::Serialize;

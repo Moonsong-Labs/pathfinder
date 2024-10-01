@@ -8,11 +8,7 @@ use pathfinder_common::event::Event;
 use pathfinder_common::receipt::Receipt;
 use pathfinder_common::transaction::Transaction;
 use pathfinder_common::{
-    BlockHeader,
-    BlockNumber,
-    EventCommitment,
-    StarknetVersion,
-    TransactionHash,
+    BlockHeader, BlockNumber, EventCommitment, StarknetVersion, TransactionHash,
 };
 use pathfinder_storage::Storage;
 use tokio::task::spawn_blocking;

@@ -61,14 +61,9 @@ impl From<AddDeployAccountTransactionError> for crate::error::ApplicationError {
 impl From<SequencerError> for AddDeployAccountTransactionError {
     fn from(e: SequencerError) -> Self {
         use starknet_gateway_types::error::KnownStarknetErrorCode::{
-            DuplicatedTransaction,
-            EntryPointNotFound,
-            InsufficientAccountBalance,
-            InsufficientMaxFee,
-            InvalidTransactionNonce,
-            InvalidTransactionVersion,
-            UndeclaredClass,
-            ValidateFailure,
+            DuplicatedTransaction, EntryPointNotFound, InsufficientAccountBalance,
+            InsufficientMaxFee, InvalidTransactionNonce, InvalidTransactionVersion,
+            UndeclaredClass, ValidateFailure,
         };
         match e {
             SequencerError::StarknetError(e) if e.code == UndeclaredClass.into() => {
@@ -120,17 +115,12 @@ pub async fn add_deploy_account_transaction(
 mod tests {
     use pathfinder_common::macro_prelude::*;
     use pathfinder_common::{
-        ResourceAmount,
-        ResourcePricePerUnit,
-        Tip,
-        TransactionNonce,
-        TransactionVersion,
+        ResourceAmount, ResourcePricePerUnit, Tip, TransactionNonce, TransactionVersion,
     };
 
     use super::*;
     use crate::v02::types::request::{
-        BroadcastedDeployAccountTransactionV1,
-        BroadcastedDeployAccountTransactionV3,
+        BroadcastedDeployAccountTransactionV1, BroadcastedDeployAccountTransactionV3,
     };
     use crate::v02::types::{DataAvailabilityMode, ResourceBound, ResourceBounds};
 
@@ -171,9 +161,7 @@ mod tests {
     #[test]
     fn unexpected_error_message() {
         use starknet_gateway_types::error::{
-            KnownStarknetErrorCode,
-            StarknetError,
-            StarknetErrorCode,
+            KnownStarknetErrorCode, StarknetError, StarknetErrorCode,
         };
         let starknet_error = SequencerError::StarknetError(StarknetError {
             code: StarknetErrorCode::Known(KnownStarknetErrorCode::TransactionLimitExceeded),

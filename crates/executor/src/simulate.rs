@@ -9,15 +9,8 @@ use blockifier::transaction::transaction_execution::Transaction;
 use blockifier::transaction::transactions::ExecutableTransaction;
 use cached::{Cached, SizedCache};
 use pathfinder_common::{
-    BlockHash,
-    CasmHash,
-    ClassHash,
-    ContractAddress,
-    ContractNonce,
-    SierraHash,
-    StorageAddress,
-    StorageValue,
-    TransactionHash,
+    BlockHash, CasmHash, ClassHash, ContractAddress, ContractNonce, SierraHash, StorageAddress,
+    StorageValue, TransactionHash,
 };
 
 use super::error::TransactionExecutionError;
@@ -25,20 +18,10 @@ use super::execution_state::ExecutionState;
 use super::types::{FeeEstimate, TransactionSimulation, TransactionTrace};
 use crate::transaction::transaction_hash;
 use crate::types::{
-    DataAvailabilityResources,
-    DeclareTransactionTrace,
-    DeclaredSierraClass,
-    DeployAccountTransactionTrace,
-    DeployedContract,
-    ExecuteInvocation,
-    ExecutionResources,
-    FunctionInvocation,
-    InvokeTransactionTrace,
-    L1HandlerTransactionTrace,
-    PriceUnit,
-    ReplacedClass,
-    StateDiff,
-    StorageDiff,
+    DataAvailabilityResources, DeclareTransactionTrace, DeclaredSierraClass,
+    DeployAccountTransactionTrace, DeployedContract, ExecuteInvocation, ExecutionResources,
+    FunctionInvocation, InvokeTransactionTrace, L1HandlerTransactionTrace, PriceUnit,
+    ReplacedClass, StateDiff, StorageDiff,
 };
 use crate::IntoFelt;
 

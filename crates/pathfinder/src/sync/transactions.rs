@@ -7,12 +7,7 @@ use p2p::PeerData;
 use pathfinder_common::receipt::Receipt;
 use pathfinder_common::transaction::{Transaction, TransactionVariant};
 use pathfinder_common::{
-    BlockHeader,
-    BlockNumber,
-    ChainId,
-    StarknetVersion,
-    TransactionCommitment,
-    TransactionHash,
+    BlockHeader, BlockNumber, ChainId, StarknetVersion, TransactionCommitment, TransactionHash,
 };
 use pathfinder_storage::Storage;
 

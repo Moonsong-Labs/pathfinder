@@ -28,10 +28,7 @@ use crate::error::ApplicationError;
 use crate::jsonrpc::request::RawParams;
 use crate::jsonrpc::router::RpcRequestError;
 use crate::jsonrpc::websocket::data::{
-    EventFilterParams,
-    ResponseEvent,
-    SubscriptionId,
-    SubscriptionItem,
+    EventFilterParams, ResponseEvent, SubscriptionId, SubscriptionItem,
 };
 use crate::jsonrpc::{RequestId, RpcError, RpcRequest, RpcRouter};
 use crate::method::get_events::types::EmittedEvent;
@@ -656,20 +653,9 @@ mod tests {
     use pathfinder_common::event::Event;
     use pathfinder_common::transaction::Transaction;
     use pathfinder_common::{
-        block_hash,
-        event_commitment,
-        event_key,
-        state_commitment,
-        transaction_commitment,
-        transaction_hash,
-        BlockNumber,
-        BlockTimestamp,
-        ContractAddress,
-        EventData,
-        EventKey,
-        GasPrice,
-        SequencerAddress,
-        StarknetVersion,
+        block_hash, event_commitment, event_key, state_commitment, transaction_commitment,
+        transaction_hash, BlockNumber, BlockTimestamp, ContractAddress, EventData, EventKey,
+        GasPrice, SequencerAddress, StarknetVersion,
     };
     use pathfinder_crypto::Felt;
     use pretty_assertions_sorted::assert_eq;

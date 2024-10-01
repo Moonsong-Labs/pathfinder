@@ -154,14 +154,8 @@ pub async fn estimate_fee(
 #[cfg(test)]
 pub(crate) mod tests {
     use pathfinder_common::{
-        felt,
-        BlockHash,
-        CallParam,
-        ContractAddress,
-        Fee,
-        TransactionNonce,
-        TransactionSignatureElem,
-        TransactionVersion,
+        felt, BlockHash, CallParam, ContractAddress, Fee, TransactionNonce,
+        TransactionSignatureElem, TransactionVersion,
     };
 
     use super::*;
@@ -250,10 +244,8 @@ pub(crate) mod tests {
 
         use super::*;
         use crate::v02::types::request::{
-            BroadcastedDeclareTransaction,
-            BroadcastedDeclareTransactionV2,
-            BroadcastedInvokeTransactionV0,
-            BroadcastedInvokeTransactionV1,
+            BroadcastedDeclareTransaction, BroadcastedDeclareTransactionV2,
+            BroadcastedInvokeTransactionV0, BroadcastedInvokeTransactionV1,
         };
         use crate::v02::types::{ContractClass, SierraContractClass};
 

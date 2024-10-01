@@ -6,19 +6,12 @@ use anyhow::Context;
 use futures::{pin_mut, Stream, StreamExt, TryStreamExt};
 use p2p::client::conv::TryFromDto;
 use p2p::client::peer_agnostic::traits::{
-    ClassStream,
-    EventStream,
-    HeaderStream,
-    StateDiffStream,
-    TransactionStream,
+    ClassStream, EventStream, HeaderStream, StateDiffStream, TransactionStream,
 };
 use p2p::client::peer_agnostic::Client as P2PClient;
 use p2p::client::types::{
-    ClassDefinition,
-    EventsForBlockByTransaction,
-    SignedBlockHeader as P2PSignedBlockHeader,
-    UnverifiedStateUpdateData,
-    UnverifiedTransactionData,
+    ClassDefinition, EventsForBlockByTransaction, SignedBlockHeader as P2PSignedBlockHeader,
+    UnverifiedStateUpdateData, UnverifiedTransactionData,
 };
 use p2p::PeerData;
 use p2p_proto::common::{BlockNumberOrHash, Direction, Iteration};
@@ -27,13 +20,7 @@ use pathfinder_common::receipt::Receipt;
 use pathfinder_common::state_update::StateUpdateData;
 use pathfinder_common::transaction::{Transaction, TransactionVariant};
 use pathfinder_common::{
-    BlockHash,
-    BlockNumber,
-    Chain,
-    ChainId,
-    ClassHash,
-    PublicKey,
-    TransactionIndex,
+    BlockHash, BlockNumber, Chain, ChainId, ClassHash, PublicKey, TransactionIndex,
 };
 use pathfinder_ethereum::EthereumStateUpdate;
 use pathfinder_storage::Storage;
@@ -651,19 +638,9 @@ mod tests {
         use p2p::libp2p::PeerId;
         use p2p_proto::header;
         use pathfinder_common::{
-            public_key,
-            BlockCommitmentSignature,
-            BlockCommitmentSignatureElem,
-            BlockHash,
-            BlockHeader,
-            BlockTimestamp,
-            EventCommitment,
-            ReceiptCommitment,
-            SequencerAddress,
-            StarknetVersion,
-            StateCommitment,
-            StateDiffCommitment,
-            TransactionCommitment,
+            public_key, BlockCommitmentSignature, BlockCommitmentSignatureElem, BlockHash,
+            BlockHeader, BlockTimestamp, EventCommitment, ReceiptCommitment, SequencerAddress,
+            StarknetVersion, StateCommitment, StateDiffCommitment, TransactionCommitment,
         };
         use pathfinder_storage::fake::{self as fake_storage, Block};
         use pathfinder_storage::StorageBuilder;
@@ -915,8 +892,7 @@ mod tests {
         use fake::{Dummy, Faker};
         use futures::stream;
         use p2p::client::types::{
-            UnverifiedTransactionData,
-            UnverifiedTransactionDataWithBlockNumber,
+            UnverifiedTransactionData, UnverifiedTransactionDataWithBlockNumber,
         };
         use p2p::libp2p::PeerId;
         use pathfinder_common::receipt::Receipt;
@@ -1277,22 +1253,14 @@ mod tests {
         use pathfinder_common::event::Event;
         use pathfinder_common::transaction::TransactionVariant;
         use pathfinder_common::{
-            class_hash,
-            felt,
-            sierra_hash,
-            BlockHeader,
-            CasmHash,
-            ClassHash,
-            SierraHash,
-            SignedBlockHeader,
-            TransactionHash,
+            class_hash, felt, sierra_hash, BlockHeader, CasmHash, ClassHash, SierraHash,
+            SignedBlockHeader, TransactionHash,
         };
         use pathfinder_crypto::Felt;
         use pathfinder_storage::fake::{self as fake_storage, Block};
         use pathfinder_storage::StorageBuilder;
         use starknet_gateway_test_fixtures::class_definitions::{
-            CAIRO_0_10_TUPLES_INTEGRATION as CAIRO,
-            CAIRO_0_11_SIERRA as SIERRA0,
+            CAIRO_0_10_TUPLES_INTEGRATION as CAIRO, CAIRO_0_11_SIERRA as SIERRA0,
             CAIRO_2_0_0_STACK_OVERFLOW as SIERRA2,
         };
         use starknet_gateway_types::error::SequencerError;

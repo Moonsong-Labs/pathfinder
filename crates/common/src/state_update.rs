@@ -3,17 +3,8 @@ use std::collections::{HashMap, HashSet};
 use fake::Dummy;
 
 use crate::{
-    BlockHash,
-    CasmHash,
-    ClassHash,
-    ContractAddress,
-    ContractNonce,
-    SierraHash,
-    StarknetVersion,
-    StateCommitment,
-    StateDiffCommitment,
-    StorageAddress,
-    StorageValue,
+    BlockHash, CasmHash, ClassHash, ContractAddress, ContractNonce, SierraHash, StarknetVersion,
+    StateCommitment, StateDiffCommitment, StorageAddress, StorageValue,
 };
 
 #[derive(Default, Debug, Clone, PartialEq)]
@@ -347,16 +338,8 @@ mod state_diff_commitment {
 
     use super::{ContractUpdate, SystemContractUpdate};
     use crate::{
-        felt_bytes,
-        CasmHash,
-        ClassHash,
-        ContractAddress,
-        ContractNonce,
-        SierraHash,
-        StarknetVersion,
-        StateDiffCommitment,
-        StorageAddress,
-        StorageValue,
+        felt_bytes, CasmHash, ClassHash, ContractAddress, ContractNonce, SierraHash,
+        StarknetVersion, StateDiffCommitment, StorageAddress, StorageValue,
     };
 
     /// Compute the state diff commitment used in block commitment signatures.

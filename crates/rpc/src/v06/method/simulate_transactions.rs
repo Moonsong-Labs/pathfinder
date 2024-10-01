@@ -779,14 +779,12 @@ pub(crate) mod tests {
     use pathfinder_common::macro_prelude::*;
     use pathfinder_common::{felt, ClassHash, StarknetVersion, StorageValue, TransactionVersion};
     use starknet_gateway_test_fixtures::class_definitions::{
-        DUMMY_ACCOUNT_CLASS_HASH,
-        ERC20_CONTRACT_DEFINITION_CLASS_HASH,
+        DUMMY_ACCOUNT_CLASS_HASH, ERC20_CONTRACT_DEFINITION_CLASS_HASH,
     };
 
     use super::*;
     use crate::v02::types::request::{
-        BroadcastedDeclareTransaction,
-        BroadcastedDeclareTransactionV1,
+        BroadcastedDeclareTransaction, BroadcastedDeclareTransactionV1,
     };
     use crate::v02::types::ContractClass;
     use crate::v03::method::get_state_update::types::{DeployedContract, Nonce, StateDiff};
@@ -1050,11 +1048,7 @@ pub(crate) mod tests {
     pub(crate) mod fixtures {
         use super::*;
         pub use crate::v04::method::simulate_transactions::tests::fixtures::{
-            CASM_DEFINITION,
-            CASM_HASH,
-            DEPLOYED_CONTRACT_ADDRESS,
-            SIERRA_DEFINITION,
-            SIERRA_HASH,
+            CASM_DEFINITION, CASM_HASH, DEPLOYED_CONTRACT_ADDRESS, SIERRA_DEFINITION, SIERRA_HASH,
             UNIVERSAL_DEPLOYER_CLASS_HASH,
         };
 
@@ -1069,9 +1063,7 @@ pub(crate) mod tests {
             use super::dto::*;
             use super::*;
             use crate::v03::method::get_state_update::types::{
-                DeclaredSierraClass,
-                StorageDiff,
-                StorageEntry,
+                DeclaredSierraClass, StorageDiff, StorageEntry,
             };
 
             const DECLARE_GAS_CONSUMED: u64 = 3632;

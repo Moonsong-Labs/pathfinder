@@ -3,14 +3,8 @@ use std::collections::HashMap;
 use anyhow::Context;
 use pathfinder_common::state_update::ReverseContractUpdate;
 use pathfinder_common::{
-    BlockNumber,
-    ClassHash,
-    ContractAddress,
-    ContractNonce,
-    ContractRoot,
-    ContractStateHash,
-    StorageAddress,
-    StorageValue,
+    BlockNumber, ClassHash, ContractAddress, ContractNonce, ContractRoot, ContractStateHash,
+    StorageAddress, StorageValue,
 };
 use pathfinder_crypto::hash::pedersen_hash;
 use pathfinder_crypto::Felt;

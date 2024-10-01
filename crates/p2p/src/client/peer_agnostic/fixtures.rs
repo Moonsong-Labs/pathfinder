@@ -14,12 +14,7 @@ use pathfinder_common::event::Event;
 use pathfinder_common::state_update::{ContractClassUpdate, ContractUpdate, StateUpdateData};
 use pathfinder_common::transaction::TransactionVariant;
 use pathfinder_common::{
-    BlockNumber,
-    CasmHash,
-    ClassHash,
-    ContractAddress,
-    SierraHash,
-    TransactionHash,
+    BlockNumber, CasmHash, ClassHash, ContractAddress, SierraHash, TransactionHash,
     TransactionIndex,
 };
 use tagged::Tagged;

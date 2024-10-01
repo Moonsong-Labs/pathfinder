@@ -21,19 +21,12 @@ mod tests {
     use pretty_assertions_sorted::assert_eq;
 
     use crate::v02::types::request::{
-        BroadcastedDeclareTransaction,
-        BroadcastedDeclareTransactionV2,
-        BroadcastedInvokeTransaction,
-        BroadcastedInvokeTransactionV0,
-        BroadcastedInvokeTransactionV1,
-        BroadcastedInvokeTransactionV3,
-        BroadcastedTransaction,
+        BroadcastedDeclareTransaction, BroadcastedDeclareTransactionV2,
+        BroadcastedInvokeTransaction, BroadcastedInvokeTransactionV0,
+        BroadcastedInvokeTransactionV1, BroadcastedInvokeTransactionV3, BroadcastedTransaction,
     };
     use crate::v02::types::{
-        ContractClass,
-        DataAvailabilityMode,
-        ResourceBounds,
-        SierraContractClass,
+        ContractClass, DataAvailabilityMode, ResourceBounds, SierraContractClass,
     };
     use crate::v06::method::estimate_fee::*;
     use crate::v06::types::PriceUnit;

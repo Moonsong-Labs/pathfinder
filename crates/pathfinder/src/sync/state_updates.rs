@@ -6,14 +6,8 @@ use p2p::client::types::UnverifiedStateUpdateData;
 use p2p::PeerData;
 use pathfinder_common::state_update::{ContractClassUpdate, ContractUpdate, StateUpdateData};
 use pathfinder_common::{
-    BlockHash,
-    BlockHeader,
-    BlockNumber,
-    StarknetVersion,
-    StateCommitment,
-    StateDiffCommitment,
-    StateUpdate,
-    StorageCommitment,
+    BlockHash, BlockHeader, BlockNumber, StarknetVersion, StateCommitment, StateDiffCommitment,
+    StateUpdate, StorageCommitment,
 };
 use pathfinder_merkle_tree::contract_state::{update_contract_state, ContractStateUpdateResult};
 use pathfinder_merkle_tree::StorageCommitmentTree;

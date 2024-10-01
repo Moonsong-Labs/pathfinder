@@ -12,15 +12,8 @@ pub async fn trace_block_transactions(
 pub(crate) mod tests {
     use pathfinder_common::receipt::Receipt;
     use pathfinder_common::{
-        block_hash,
-        transaction_hash,
-        BlockHeader,
-        BlockId,
-        GasPrice,
-        L1DataAvailabilityMode,
-        SierraHash,
-        StarknetVersion,
-        TransactionIndex,
+        block_hash, transaction_hash, BlockHeader, BlockId, GasPrice, L1DataAvailabilityMode,
+        SierraHash, StarknetVersion, TransactionIndex,
     };
     use starknet_gateway_types::reply::GasPrices;
     use tokio::task::JoinSet;

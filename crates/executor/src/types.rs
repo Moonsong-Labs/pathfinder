@@ -3,13 +3,7 @@ use std::collections::{BTreeMap, HashSet};
 use blockifier::execution::call_info::OrderedL2ToL1Message;
 use blockifier::transaction::objects::{GasVector, TransactionExecutionInfo};
 use pathfinder_common::{
-    CasmHash,
-    ClassHash,
-    ContractAddress,
-    ContractNonce,
-    SierraHash,
-    StorageAddress,
-    StorageValue,
+    CasmHash, ClassHash, ContractAddress, ContractNonce, SierraHash, StorageAddress, StorageValue,
 };
 use pathfinder_crypto::Felt;
 
@@ -392,13 +386,8 @@ fn ordered_l2_to_l1_messages(
 impl From<cairo_vm::vm::runners::cairo_runner::ExecutionResources> for ComputationResources {
     fn from(value: cairo_vm::vm::runners::cairo_runner::ExecutionResources) -> Self {
         use cairo_vm::vm::runners::builtin_runner::{
-            BITWISE_BUILTIN_NAME,
-            EC_OP_BUILTIN_NAME,
-            HASH_BUILTIN_NAME,
-            KECCAK_BUILTIN_NAME,
-            POSEIDON_BUILTIN_NAME,
-            RANGE_CHECK_BUILTIN_NAME,
-            SEGMENT_ARENA_BUILTIN_NAME,
+            BITWISE_BUILTIN_NAME, EC_OP_BUILTIN_NAME, HASH_BUILTIN_NAME, KECCAK_BUILTIN_NAME,
+            POSEIDON_BUILTIN_NAME, RANGE_CHECK_BUILTIN_NAME, SEGMENT_ARENA_BUILTIN_NAME,
             SIGNATURE_BUILTIN_NAME,
         };
 

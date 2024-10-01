@@ -7,12 +7,8 @@ use futures::{pin_mut, Stream, StreamExt, TryStreamExt};
 use p2p::client::peer_agnostic::traits::{BlockClient, HeaderStream};
 use p2p::client::peer_agnostic::Client as P2PClient;
 use p2p::client::types::{
-    BlockHeader as P2PBlockHeader,
-    ClassDefinition as P2PClassDefinition,
-    ClassDefinitionsError,
-    IncorrectStateDiffCount,
-    SignedBlockHeader as P2PSignedBlockHeader,
-    UnverifiedStateUpdateData,
+    BlockHeader as P2PBlockHeader, ClassDefinition as P2PClassDefinition, ClassDefinitionsError,
+    IncorrectStateDiffCount, SignedBlockHeader as P2PSignedBlockHeader, UnverifiedStateUpdateData,
     UnverifiedTransactionData,
 };
 use p2p::PeerData;
@@ -22,24 +18,9 @@ use pathfinder_common::receipt::Receipt;
 use pathfinder_common::state_update::{DeclaredClasses, StateUpdateData};
 use pathfinder_common::transaction::{Transaction, TransactionVariant};
 use pathfinder_common::{
-    BlockHash,
-    BlockHeader,
-    BlockNumber,
-    Chain,
-    ChainId,
-    ClassCommitment,
-    ClassHash,
-    EventCommitment,
-    PublicKey,
-    ReceiptCommitment,
-    SierraHash,
-    SignedBlockHeader,
-    StarknetVersion,
-    StateDiffCommitment,
-    StateUpdate,
-    StorageCommitment,
-    TransactionCommitment,
-    TransactionHash,
+    BlockHash, BlockHeader, BlockNumber, Chain, ChainId, ClassCommitment, ClassHash,
+    EventCommitment, PublicKey, ReceiptCommitment, SierraHash, SignedBlockHeader, StarknetVersion,
+    StateDiffCommitment, StateUpdate, StorageCommitment, TransactionCommitment, TransactionHash,
 };
 use pathfinder_storage::Storage;
 use starknet_gateway_client::GatewayApi;
@@ -820,10 +801,7 @@ impl ProcessStage for StoreBlock {
 mod tests {
     use futures::{stream, Stream, StreamExt};
     use p2p::client::types::{
-        ClassDefinition,
-        ClassDefinitionsError,
-        IncorrectStateDiffCount,
-        Receipt as P2PReceipt,
+        ClassDefinition, ClassDefinitionsError, IncorrectStateDiffCount, Receipt as P2PReceipt,
     };
     use p2p::libp2p::PeerId;
     use p2p::PeerData;
@@ -836,11 +814,8 @@ mod tests {
 
     use super::*;
     use crate::state::block_hash::{
-        calculate_event_commitment,
-        calculate_receipt_commitment,
-        calculate_transaction_commitment,
-        compute_final_hash,
-        BlockHeaderData,
+        calculate_event_commitment, calculate_receipt_commitment, calculate_transaction_commitment,
+        compute_final_hash, BlockHeaderData,
     };
 
     #[tokio::test]

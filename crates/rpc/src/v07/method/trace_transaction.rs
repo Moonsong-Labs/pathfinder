@@ -11,8 +11,7 @@ pub async fn trace_transaction(
 #[cfg(test)]
 pub mod tests {
     use super::super::trace_block_transactions::tests::{
-        setup_multi_tx_trace_pending_test,
-        setup_multi_tx_trace_test,
+        setup_multi_tx_trace_pending_test, setup_multi_tx_trace_test,
     };
     use super::v06::{TraceTransactionInput, TraceTransactionOutput};
     use super::*;

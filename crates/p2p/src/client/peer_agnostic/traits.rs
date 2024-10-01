@@ -6,14 +6,8 @@ use pathfinder_common::transaction::TransactionVariant;
 use pathfinder_common::{BlockNumber, StateDiffCommitment, TransactionCommitment, TransactionHash};
 
 use crate::client::types::{
-    ClassDefinition,
-    ClassDefinitionsError,
-    EventsForBlockByTransaction,
-    IncorrectStateDiffCount,
-    Receipt,
-    SignedBlockHeader,
-    UnverifiedStateUpdateData,
-    UnverifiedTransactionData,
+    ClassDefinition, ClassDefinitionsError, EventsForBlockByTransaction, IncorrectStateDiffCount,
+    Receipt, SignedBlockHeader, UnverifiedStateUpdateData, UnverifiedTransactionData,
 };
 use crate::PeerData;
 

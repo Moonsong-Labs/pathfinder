@@ -2,12 +2,7 @@ use std::num::NonZeroUsize;
 
 use pathfinder_common::event::Event;
 use pathfinder_common::{
-    BlockHash,
-    BlockNumber,
-    ContractAddress,
-    EventData,
-    EventKey,
-    TransactionHash,
+    BlockHash, BlockNumber, ContractAddress, EventData, EventKey, TransactionHash,
 };
 
 use crate::bloom::BloomFilter;

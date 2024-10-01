@@ -1,16 +1,7 @@
 use pathfinder_common::transaction::{
-    DeclareTransactionV0V1,
-    DeclareTransactionV2,
-    DeclareTransactionV3,
-    DeployAccountTransactionV1,
-    DeployAccountTransactionV3,
-    DeployTransactionV0,
-    DeployTransactionV1,
-    InvokeTransactionV0,
-    InvokeTransactionV1,
-    InvokeTransactionV3,
-    L1HandlerTransaction,
-    ResourceBounds,
+    DeclareTransactionV0V1, DeclareTransactionV2, DeclareTransactionV3, DeployAccountTransactionV1,
+    DeployAccountTransactionV3, DeployTransactionV0, DeployTransactionV1, InvokeTransactionV0,
+    InvokeTransactionV1, InvokeTransactionV3, L1HandlerTransaction, ResourceBounds,
 };
 use pathfinder_common::{Fee, TransactionHash, TransactionVersion};
 use pathfinder_crypto::Felt;

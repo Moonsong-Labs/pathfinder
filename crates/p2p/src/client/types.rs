@@ -6,22 +6,9 @@ use pathfinder_common::receipt::{ExecutionResources, ExecutionStatus, L2ToL1Mess
 use pathfinder_common::state_update::StateUpdateData;
 use pathfinder_common::transaction::TransactionVariant;
 use pathfinder_common::{
-    BlockCommitmentSignature,
-    BlockCommitmentSignatureElem,
-    BlockHash,
-    BlockNumber,
-    BlockTimestamp,
-    EventCommitment,
-    Fee,
-    GasPrice,
-    L1DataAvailabilityMode,
-    ReceiptCommitment,
-    SequencerAddress,
-    StarknetVersion,
-    StateCommitment,
-    StateDiffCommitment,
-    TransactionCommitment,
-    TransactionHash,
+    BlockCommitmentSignature, BlockCommitmentSignatureElem, BlockHash, BlockNumber, BlockTimestamp,
+    EventCommitment, Fee, GasPrice, L1DataAvailabilityMode, ReceiptCommitment, SequencerAddress,
+    StarknetVersion, StateCommitment, StateDiffCommitment, TransactionCommitment, TransactionHash,
     TransactionIndex,
 };
 use tagged::Tagged;

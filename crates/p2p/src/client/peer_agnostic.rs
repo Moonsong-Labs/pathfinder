@@ -12,28 +12,15 @@ use p2p_proto::common::{Direction, Iteration};
 use p2p_proto::event::{EventsRequest, EventsResponse};
 use p2p_proto::header::{BlockHeadersRequest, BlockHeadersResponse};
 use p2p_proto::state::{
-    ContractDiff,
-    ContractStoredValue,
-    DeclaredClass,
-    StateDiffsRequest,
-    StateDiffsResponse,
+    ContractDiff, ContractStoredValue, DeclaredClass, StateDiffsRequest, StateDiffsResponse,
 };
 use p2p_proto::transaction::{TransactionWithReceipt, TransactionsRequest, TransactionsResponse};
 use pathfinder_common::event::Event;
 use pathfinder_common::state_update::{ContractClassUpdate, StateUpdateData};
 use pathfinder_common::transaction::TransactionVariant;
 use pathfinder_common::{
-    BlockNumber,
-    CasmHash,
-    ClassHash,
-    ContractAddress,
-    ContractNonce,
-    SierraHash,
-    StateDiffCommitment,
-    StorageAddress,
-    StorageValue,
-    TransactionCommitment,
-    TransactionHash,
+    BlockNumber, CasmHash, ClassHash, ContractAddress, ContractNonce, SierraHash,
+    StateDiffCommitment, StorageAddress, StorageValue, TransactionCommitment, TransactionHash,
     TransactionIndex,
 };
 use tokio::sync::RwLock;
@@ -45,25 +32,14 @@ mod tests;
 pub mod traits;
 
 use traits::{
-    BlockClient,
-    ClassStream,
-    EventStream,
-    HeaderStream,
-    StateDiffStream,
-    TransactionStream,
+    BlockClient, ClassStream, EventStream, HeaderStream, StateDiffStream, TransactionStream,
 };
 
 use crate::client::conv::{CairoDefinition, FromDto, SierraDefinition, TryFromDto};
 use crate::client::peer_aware;
 use crate::client::types::{
-    ClassDefinition,
-    ClassDefinitionsError,
-    EventsForBlockByTransaction,
-    IncorrectStateDiffCount,
-    Receipt,
-    SignedBlockHeader,
-    UnverifiedStateUpdateData,
-    UnverifiedTransactionData,
+    ClassDefinition, ClassDefinitionsError, EventsForBlockByTransaction, IncorrectStateDiffCount,
+    Receipt, SignedBlockHeader, UnverifiedStateUpdateData, UnverifiedTransactionData,
     UnverifiedTransactionDataWithBlockNumber,
 };
 use crate::peer_data::PeerData;

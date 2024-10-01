@@ -10,68 +10,30 @@ use p2p_proto::class::{Cairo0Class, Cairo1Class, Cairo1EntryPoints, SierraEntryP
 use p2p_proto::common::{Address, Hash};
 use p2p_proto::receipt::execution_resources::BuiltinCounter;
 use p2p_proto::receipt::{
-    DeclareTransactionReceipt,
-    DeployAccountTransactionReceipt,
-    DeployTransactionReceipt,
-    EthereumAddress,
-    InvokeTransactionReceipt,
-    L1HandlerTransactionReceipt,
-    MessageToL1,
+    DeclareTransactionReceipt, DeployAccountTransactionReceipt, DeployTransactionReceipt,
+    EthereumAddress, InvokeTransactionReceipt, L1HandlerTransactionReceipt, MessageToL1,
     ReceiptCommon,
 };
 use p2p_proto::transaction::AccountSignature;
 use pathfinder_common::class_definition::{
-    Cairo,
-    SelectorAndFunctionIndex,
-    SelectorAndOffset,
-    Sierra,
+    Cairo, SelectorAndFunctionIndex, SelectorAndOffset, Sierra,
 };
 use pathfinder_common::event::Event;
 use pathfinder_common::receipt::{
-    BuiltinCounters,
-    ExecutionDataAvailability,
-    ExecutionResources,
-    ExecutionStatus,
-    L2ToL1Message,
+    BuiltinCounters, ExecutionDataAvailability, ExecutionResources, ExecutionStatus, L2ToL1Message,
     Receipt,
 };
 use pathfinder_common::transaction::{
-    DataAvailabilityMode,
-    DeclareTransactionV0V1,
-    DeclareTransactionV2,
-    DeclareTransactionV3,
-    DeployAccountTransactionV1,
-    DeployAccountTransactionV3,
-    DeployTransactionV0,
-    DeployTransactionV1,
-    InvokeTransactionV0,
-    InvokeTransactionV1,
-    InvokeTransactionV3,
-    L1HandlerTransaction,
-    ResourceBound,
-    ResourceBounds,
-    TransactionVariant,
+    DataAvailabilityMode, DeclareTransactionV0V1, DeclareTransactionV2, DeclareTransactionV3,
+    DeployAccountTransactionV1, DeployAccountTransactionV3, DeployTransactionV0,
+    DeployTransactionV1, InvokeTransactionV0, InvokeTransactionV1, InvokeTransactionV3,
+    L1HandlerTransaction, ResourceBound, ResourceBounds, TransactionVariant,
 };
 use pathfinder_common::{
-    AccountDeploymentDataElem,
-    ByteCodeOffset,
-    CallParam,
-    CasmHash,
-    ClassHash,
-    ConstructorParam,
-    ContractAddress,
-    ContractAddressSalt,
-    EntryPoint,
-    EventData,
-    EventKey,
-    Fee,
-    GasPrice,
-    L1DataAvailabilityMode,
-    L2ToL1MessagePayloadElem,
-    TransactionHash,
-    TransactionIndex,
-    TransactionNonce,
-    TransactionSignatureElem,
+    AccountDeploymentDataElem, ByteCodeOffset, CallParam, CasmHash, ClassHash, ConstructorParam,
+    ContractAddress, ContractAddressSalt, EntryPoint, EventData, EventKey, Fee, GasPrice,
+    L1DataAvailabilityMode, L2ToL1MessagePayloadElem, TransactionHash, TransactionIndex,
+    TransactionNonce, TransactionSignatureElem,
 };
 use pathfinder_crypto::Felt;
 use serde::{Deserialize, Serialize};
@@ -383,17 +345,8 @@ impl TryFromDto<p2p_proto::transaction::Transaction> for TransactionVariant {
         Self: Sized,
     {
         use p2p_proto::transaction::Transaction::{
-            DeclareV0,
-            DeclareV1,
-            DeclareV2,
-            DeclareV3,
-            Deploy,
-            DeployAccountV1,
-            DeployAccountV3,
-            InvokeV0,
-            InvokeV1,
-            InvokeV3,
-            L1HandlerV0,
+            DeclareV0, DeclareV1, DeclareV2, DeclareV3, Deploy, DeployAccountV1, DeployAccountV3,
+            InvokeV0, InvokeV1, InvokeV3, L1HandlerV0,
         };
         Ok(match dto {
             DeclareV0(x) => Self::DeclareV0(DeclareTransactionV0V1 {
@@ -632,11 +585,8 @@ impl TryFrom<(p2p_proto::receipt::Receipt, TransactionIndex)> for crate::client:
     ) -> anyhow::Result<Self> {
         use p2p_proto::receipt::Receipt::{Declare, Deploy, DeployAccount, Invoke, L1Handler};
         use p2p_proto::receipt::{
-            DeclareTransactionReceipt,
-            DeployAccountTransactionReceipt,
-            DeployTransactionReceipt,
-            InvokeTransactionReceipt,
-            L1HandlerTransactionReceipt,
+            DeclareTransactionReceipt, DeployAccountTransactionReceipt, DeployTransactionReceipt,
+            InvokeTransactionReceipt, L1HandlerTransactionReceipt,
         };
         match dto {
             Invoke(InvokeTransactionReceipt { common })

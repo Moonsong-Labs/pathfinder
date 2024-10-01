@@ -3,12 +3,7 @@ use std::num::NonZeroUsize;
 
 use anyhow::Context;
 use pathfinder_common::{
-    BlockHash,
-    BlockHeader,
-    BlockNumber,
-    GasPrice,
-    StarknetVersion,
-    TransactionCommitment,
+    BlockHash, BlockHeader, BlockNumber, GasPrice, StarknetVersion, TransactionCommitment,
 };
 
 use crate::prelude::*;

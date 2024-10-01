@@ -5,13 +5,7 @@ use futures::channel::mpsc::Receiver as ResponseReceiver;
 use futures::StreamExt;
 use libp2p::gossipsub::{self, IdentTopic};
 use libp2p::kad::{
-    self,
-    BootstrapError,
-    BootstrapOk,
-    ProgressStep,
-    QueryId,
-    QueryInfo,
-    QueryResult,
+    self, BootstrapError, BootstrapOk, ProgressStep, QueryId, QueryInfo, QueryResult,
 };
 use libp2p::multiaddr::Protocol;
 use libp2p::swarm::dial_opts::DialOpts;

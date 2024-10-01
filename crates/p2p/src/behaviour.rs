@@ -12,16 +12,8 @@ use libp2p::kad::{self};
 use libp2p::multiaddr::Protocol;
 use libp2p::swarm::behaviour::ConnectionEstablished;
 use libp2p::swarm::{
-    ConnectionClosed,
-    ConnectionDenied,
-    ConnectionId,
-    DialFailure,
-    FromSwarm,
-    NetworkBehaviour,
-    THandler,
-    THandlerInEvent,
-    THandlerOutEvent,
-    ToSwarm,
+    ConnectionClosed, ConnectionDenied, ConnectionId, DialFailure, FromSwarm, NetworkBehaviour,
+    THandler, THandlerInEvent, THandlerOutEvent, ToSwarm,
 };
 use libp2p::{autonat, dcutr, identify, identity, ping, relay, Multiaddr, PeerId, StreamProtocol};
 use p2p_proto::class::{ClassesRequest, ClassesResponse};
