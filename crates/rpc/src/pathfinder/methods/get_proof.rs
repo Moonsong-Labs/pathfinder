@@ -249,7 +249,7 @@ pub async fn get_proof(
                 input.contract_address,
                 header.number,
                 k.view_bits(),
-                root.unwrap()
+                root.expect("Root cannot be empty"),
             )
             .context("Get proof from contract state tree")?
             .ok_or_else(|| {
