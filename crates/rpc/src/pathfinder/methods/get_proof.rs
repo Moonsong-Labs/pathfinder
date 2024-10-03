@@ -256,11 +256,7 @@ pub async fn get_proof(
             .contract_state_hash(header.number, input.contract_address)
             .context("Fetching contract's state hash")?;
 
-        let root = tx
-            .contract_root_index(header.number, input.contract_address)
-            .context("Querying contract root index")?;
-
-        if contract_state_hash.is_none() || root.is_none() {
+        if contract_state_hash.is_none() {
             return Ok(GetProofOutput {
                 state_commitment,
                 class_commitment,
@@ -291,7 +287,6 @@ pub async fn get_proof(
                 input.contract_address,
                 header.number,
                 k.view_bits(),
-                root.expect("Root cannot be empty"),
             )
             .context("Get proof from contract state tree")?
             .ok_or_else(|| {
